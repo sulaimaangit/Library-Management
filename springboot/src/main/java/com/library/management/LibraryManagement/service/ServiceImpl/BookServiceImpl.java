@@ -23,7 +23,7 @@ public class BookServiceImpl implements BookService {
             throw new RuntimeException("Author name cannot be null or empty");
         } else if (book.getQuantity() <= 0) {
             throw new RuntimeException("Quantity must be greater than zero");
-        } else if (bookRepo.findByBookName(book.getBookName()) !=null) {
+        } else if (bookRepo.findByBookName(book.getBookName()) != null) {
             throw new RuntimeException("Book with this name already exists");
         } else {
             return bookRepo.save(book);
@@ -46,7 +46,7 @@ public class BookServiceImpl implements BookService {
     @Override
     public Book updateBookByBookName(String bookName, Book book) {
         Book existingBook = bookRepo.findByBookName(bookName);
-        if (existingBook==null) {
+        if (existingBook == null) {
             throw new RuntimeException("Book not found");
         } else {
             Book updatedBook = existingBook;
@@ -101,8 +101,7 @@ public class BookServiceImpl implements BookService {
     public Book findBookByBookName(String bookName) {
         if (bookName == null || bookName.isEmpty()) {
             throw new RuntimeException("Book name cannot be null or empty");
-        }
-        else if (bookRepo.findByBookName(bookName) == null) {
+        } else if (bookRepo.findByBookName(bookName) == null) {
             throw new RuntimeException("Book not found");
         } else {
             return bookRepo.findByBookName(bookName);
