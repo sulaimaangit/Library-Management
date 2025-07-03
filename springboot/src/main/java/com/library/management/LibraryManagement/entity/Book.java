@@ -7,20 +7,19 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @Entity
 public class Book {
-    
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String bookName;
 
     private String authorName;
-    
+
     private int quantity;
 
     public Book() {

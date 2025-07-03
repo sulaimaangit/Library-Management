@@ -1,13 +1,11 @@
 package com.library.management.LibraryManagement.repository;
 
 import java.util.List;
-
 import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.library.management.LibraryManagement.entity.Book;
 
 @Repository
